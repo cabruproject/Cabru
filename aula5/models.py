@@ -12,16 +12,16 @@ class Aluno:
 
 
 class Pagamento:
-    def __init__(self, id, valor, data, aluno):
-        self.id = id
+    def __init__(self, valor, data, aluno, id_pagamento = None):
+        self.id = id_pagamento
         self.valor = valor
         self.data = data
         self.aluno = aluno
 
 
 class Turma_fk:
-    def __init__(self, id, nome, dia, hora, valor):
-        self.id = id
+    def __init__(self, nome, dia, hora, valor, id_turma = None):
+        self.id = id_turma
         self.nome = nome
         self.dia = dia
         self.hora = hora
@@ -29,8 +29,8 @@ class Turma_fk:
 
 
 class Aula:
-    def __init__(self, id, data, turma_fk):
-        self.id = id
+    def __init__(self, data, turma_fk, id_aula = None):
+        self.id = id_aula
         self.data = data
         self.turma_fk = turma_fk
 
@@ -41,7 +41,7 @@ class Aluno_aula:
 
 
 class Usuario:
-    def __init__(self, id, nome, senha):
-        self.id = id
+    def __init__(self, nome, senha, id_usuario = None):
+        self.id = id_usuario
         self.nome = nome
         self.senha = senha
